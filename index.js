@@ -76,7 +76,7 @@ function RPSCommand(receivedMessage){
         } else {
             receivedMessage.channel.send('Error!');
         }
-4
+
     } else {
         receivedMessage.channel.send("Error!");
     }
