@@ -14,8 +14,6 @@ function RPSCommand(receivedMessage){
     
     let userSelection = receivedMessage.content.toLowerCase();
 
-    console.log(userSelection);
-
     if (userSelection != 'rock' && userSelection != 'paper' && userSelection != 'scissors'){
         receivedMessage.channel.send('Unknown selection' + '\n' + 
             'please use one of `Rock`, `Paper` or `Scissors`');
@@ -42,7 +40,6 @@ function RPSCommand(receivedMessage){
     receivedMessage.channel.send(botSelection);
 
     if (userSelection == 'rock'){
-
         if (botSelection == 'scissors'){
             receivedMessage.channel.send('Congrats! You win!');
         } else if (botSelection == 'paper'){
@@ -52,9 +49,7 @@ function RPSCommand(receivedMessage){
         } else {
             receivedMessage.channel.send('Error!');
         }
-
     } else if (userSelection == 'paper'){
-
         if (botSelection == 'rock'){
             receivedMessage.channel.send('Congrats! You win!');
         } else if (botSelection == 'scissors'){
@@ -64,9 +59,7 @@ function RPSCommand(receivedMessage){
         } else {
             receivedMessage.channel.send('Error!');
         }
-    
     } else if (userSelection == 'scissors'){
-
         if (botSelection == 'paper'){
             receivedMessage.channel.send('Congrats! You win!');
         } else if (botSelection == 'rock'){
@@ -76,11 +69,9 @@ function RPSCommand(receivedMessage){
         } else {
             receivedMessage.channel.send('Error!');
         }
-
     } else {
         receivedMessage.channel.send("Error!");
     }
-
 }
 
 client.login(token);
