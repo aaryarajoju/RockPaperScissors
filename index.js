@@ -20,22 +20,7 @@ function RPSCommand(receivedMessage){
         return;
     }
 
-    let botSelectionNum = Math.floor((Math.random() * 3) + 1);
-    let botSelection = ' ';
-
-    switch (botSelectionNum){
-        case 1:
-            botSelection = 'rock';
-            break;
-        
-        case 2:
-            botSelection = 'paper';
-            break;
-
-        case 3:
-            botSelection = 'scissors';
-            break;
-    }
+    botSelection = botSelect();
 
     receivedMessage.channel.send(botSelection);
 
@@ -73,5 +58,27 @@ function RPSCommand(receivedMessage){
         receivedMessage.channel.send("Error!");
     }
 }
+
+function botSelect(){
+
+    let botSelectionNum = Math.floor((Math.random() * 3) + 1);
+    let botSelection = ' ';
+
+    switch (botSelectionNum){
+        case 1:
+            botSelection = 'rock';
+            break;
+        
+        case 2:
+            botSelection = 'paper';
+            break;
+
+        case 3:
+            botSelection = 'scissors';
+            break;
+    }
+    return botSelection;
+}
+
 
 client.login(token);
