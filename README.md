@@ -3,12 +3,13 @@
 ##
 
 
-## Contributers 
--
--
--
--
--
+## Contributors 
+- AARYA RAJOJU
+- AKSHIT
+- ANKUSH
+- KOMAL KIRAN
+- NITIN
+- VANSH SADANA
 
 
 ## Run it for yourself
