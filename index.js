@@ -12,18 +12,23 @@ client.on('message', (receivedMessage) => {
 
 function RPSCommand(receivedMessage){
     
+    // gets the user selection from  the chat
     let userSelection = receivedMessage.content.toLowerCase();
 
+    // checks if the user's selection is valid or not
     if (userSelection != 'rock' && userSelection != 'paper' && userSelection != 'scissors'){
         receivedMessage.channel.send('Unknown selection' + '\n' + 
             'please use one of `Rock`, `Paper` or `Scissors`');
         return;
     }
 
+    // calls the botSelect function to randomly pick the bot's selection
     botSelection = botSelect();
 
+    // send the bot's selection to the chat
     receivedMessage.channel.send(botSelection);
 
+    // nested if-else for checking who won and sending the result to the chat
     if (userSelection == 'rock'){
         if (botSelection == 'scissors'){
             receivedMessage.channel.send('Congrats! You win!');
@@ -61,9 +66,11 @@ function RPSCommand(receivedMessage){
 
 function botSelect(){
 
+    // randomly picks a number from 1, 2, 3
     let botSelectionNum = Math.floor((Math.random() * 3) + 1);
     let botSelection = ' ';
 
+    // from the randomly picked number, the bot's selection gets assgnied
     switch (botSelectionNum){
         case 1:
             botSelection = 'rock';
@@ -81,4 +88,5 @@ function botSelect(){
 }
 
 
+// logs in the bot
 client.login(token);
