@@ -1,9 +1,13 @@
 # RockPaperScissors
 
-##
+## Introduction
+
+The RockPaperScissors bot plays Rock-Paper-Scissors with the user. The user has to choose one of Rock, Paper, or Scissors, and then the bot randomly chooses one, and depending on who chose the winning play, the winner message is sent.
+The RockPaperScissors bot is built using DIscord.JS
 
 
 ## Contributors 
+
 - AARYA RAJOJU
 - AKSHIT
 - ANKUSH
